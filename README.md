@@ -1,6 +1,16 @@
 # yara1n
 
-Эксплойт для iOS устройств в стиле palera1n/checkm8. (mb a12-a15 (??))
+Эксплойт для iPhone на базе checkm8.
+
+## Статус
+
+⚠️ **ВНИМАНИЕ**: Проект находится в активной разработке и может быть нестабильным. Используйте на свой страх и риск.
+
+## Требования
+
+- Python 3.6+
+- pyusb
+- libusb
 
 ## Установка
 
@@ -11,18 +21,18 @@ pip install -r requirements.txt
 ## Использование
 
 ```bash
-# Переход в DFU
-python3 src/exploit.py dfu
-
-# Переход в Recovery
-python3 src/exploit.py recovery
-
-# Перезагрузка
-python3 src/exploit.py reboot
+python3 src/exploit.py [dfu|recovery|reboot|panictrig]
 ```
 
-## Требования
+### Команды
 
-- Python 3.6+
-- pyusb
-- iOS устройство в DFU режиме 
+- `dfu` - Переход в DFU режим
+- `recovery` - Переход в Recovery режим
+- `reboot` - Перезагрузка устройства
+- `panictrig` - Тестирование паники (экспериментальная функция)
+
+## Известные проблемы
+
+- Устройство может перезагружаться при попытке эксплойта
+- Нестабильная работа в ВСЕХ версиях iOS
+- Требуется доработка для ВСЕХ моделей iPhone
