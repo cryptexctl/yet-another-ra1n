@@ -1,6 +1,6 @@
 import usb.core
 import time
-from .constants import APPLE_VID, DFU_PID
+from constants import APPLE_VID, DFU_PID
 
 def find_device(pid=DFU_PID):
     dev = usb.core.find(idVendor=APPLE_VID, idProduct=pid)
